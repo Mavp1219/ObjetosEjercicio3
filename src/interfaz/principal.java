@@ -10,6 +10,9 @@ package interfaz;
  * @author user
  */
 import clases.*;
+import javax.swing.JOptionPane;
+import jdk.nashorn.internal.scripts.JO;
+
 public class principal extends javax.swing.JFrame {
 
     /**
@@ -17,6 +20,7 @@ public class principal extends javax.swing.JFrame {
      */
     public principal() {
         initComponents();
+        txtparteentera1.requestFocusInWindow();
     }
 
     /**
@@ -150,6 +154,11 @@ public class principal extends javax.swing.JFrame {
         jPanel1.add(cmdcalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 123, 100, 30));
 
         cmdlimpiar.setText("Limpiar");
+        cmdlimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdlimpiarActionPerformed(evt);
+            }
+        });
         jPanel1.add(cmdlimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, 100, 30));
         jPanel1.add(txtnumi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 80, -1));
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 90, 10));
@@ -198,36 +207,77 @@ public class principal extends javax.swing.JFrame {
 
     private void cmdcalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdcalcularActionPerformed
 
-        int opc, pr1,pr2,pi1,pi2;
-        Complejos c1,c2,c3;
+        try {
+        int opc, pr1, pr2, pi1, pi2, den;
+        Complejos c1, c2, c3;
         opc = cmbopc.getSelectedIndex();
         pr1 = Integer.parseInt(txtparteentera1.getText());
         pr2 = Integer.parseInt(txtparteentera2.getText());
         pi1 = Integer.parseInt(txtparteimaginaria1.getText());
         pi2 = Integer.parseInt(txtparteimaginaria2.getText());
-        
+
         c1 = new Complejos(pr1, pr2);
         c2 = new Complejos(pi1, pi2);
-        
-        switch(opc){
+
+        switch (opc) {
             case 0:
                 c3 = c1.sumar(c2);
-                txt
+                txtre.setText("" + c3.getPartereal());
+                txtri.setText("" + c3.getParteI());
                 break;
             case 1:
                 c3 = c1.restar(c2);
+                txtre.setText("" + c3.getPartereal());
+                txtri.setText("" + c3.getParteI());
                 break;
             case 2:
                 c3 = c1.Multiplicar(c2);
+                txtre.setText("" + c3.getPartereal());
+                txtri.setText("" + c3.getParteI());
                 break;
             case 3:
                 c3 = c1.Dividir(c2);
+                txtre.setText("");
+                txtri.setText("");
+                txtnumr.setText("" + c3.getPartereal());
+                txtnumi.setText("" + c3.getParteI());
+                den = (int) (c2.getPartereal() * c2.getPartereal() + c2.getParteI() * c2.getParteI());
+                txtdeni.setText(""+den);
+                txtdene.setText("" + den);
                 break;
         }
         
-        
-        
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(null, "Escriba bien los numeros", "Error", JOptionPane.ERROR_MESSAGE);
+           txtparteentera1.requestFocusInWindow();
+            txtdene.setText("");
+            txtdeni.setText("");
+            txtnumi.setText("");
+            txtnumr.setText("");
+            txtparteentera1.setText("");
+            txtparteentera2.setText("");
+            txtparteimaginaria1.setText("");
+            txtparteimaginaria2.setText("");
+            txtre.setText("");
+            txtri.setText("");
+        }
+
+
     }//GEN-LAST:event_cmdcalcularActionPerformed
+
+    private void cmdlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdlimpiarActionPerformed
+    txtparteentera1.requestFocusInWindow();
+            txtdene.setText("");
+            txtdeni.setText("");
+            txtnumi.setText("");
+            txtnumr.setText("");
+            txtparteentera1.setText("");
+            txtparteentera2.setText("");
+            txtparteimaginaria1.setText("");
+            txtparteimaginaria2.setText("");
+            txtre.setText("");
+            txtri.setText("");
+    }//GEN-LAST:event_cmdlimpiarActionPerformed
 
     /**
      * @param args the command line arguments
