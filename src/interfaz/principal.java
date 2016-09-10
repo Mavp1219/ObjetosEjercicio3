@@ -50,7 +50,7 @@ public class principal extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         txtnumr = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
-        txtdene = new javax.swing.JTextField();
+        txtdenr = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         cmdcalcular = new javax.swing.JButton();
         cmdlimpiar = new javax.swing.JButton();
@@ -79,7 +79,7 @@ public class principal extends javax.swing.JFrame {
         jPanel1.add(txtparteentera1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 80, 30));
         jPanel1.add(txtparteimaginaria1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 80, 30));
 
-        cmbopc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sumado", "Restado", "Multiplicado", "Dividido", " " }));
+        cmbopc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sumado", "Restado", "Multiplicado", "Dividido" }));
         jPanel1.add(cmbopc, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 80, 100, 30));
 
         txtparteimaginaria2.addActionListener(new java.awt.event.ActionListener() {
@@ -113,33 +113,38 @@ public class principal extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setText("Z");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
-        jPanel1.add(txtre, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 70, 20));
 
+        txtre.setEditable(false);
+        jPanel1.add(txtre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 80, 30));
+
+        txtri.setEditable(false);
         txtri.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtriActionPerformed(evt);
             }
         });
-        jPanel1.add(txtri, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 80, 20));
+        jPanel1.add(txtri, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 80, 30));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel8.setText("i");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 10, 20));
 
+        txtnumr.setEditable(false);
         txtnumr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtnumrActionPerformed(evt);
             }
         });
-        jPanel1.add(txtnumr, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 90, 20));
+        jPanel1.add(txtnumr, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 90, 30));
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 90, 10));
 
-        txtdene.addActionListener(new java.awt.event.ActionListener() {
+        txtdenr.setEditable(false);
+        txtdenr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtdeneActionPerformed(evt);
+                txtdenrActionPerformed(evt);
             }
         });
-        jPanel1.add(txtdene, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 90, 20));
+        jPanel1.add(txtdenr, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 90, 30));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setText("+");
@@ -160,9 +165,13 @@ public class principal extends javax.swing.JFrame {
             }
         });
         jPanel1.add(cmdlimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, 100, 30));
-        jPanel1.add(txtnumi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 80, -1));
+
+        txtnumi.setEditable(false);
+        jPanel1.add(txtnumi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 80, 30));
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 90, 10));
-        jPanel1.add(txtdeni, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 80, -1));
+
+        txtdeni.setEditable(false);
+        jPanel1.add(txtdeni, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 80, 30));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setText("+");
@@ -178,7 +187,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel13.setText("Resultado Division: ");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 410));
 
@@ -197,9 +206,9 @@ public class principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtriActionPerformed
 
-    private void txtdeneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdeneActionPerformed
+    private void txtdenrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdenrActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtdeneActionPerformed
+    }//GEN-LAST:event_txtdenrActionPerformed
 
     private void txtnumrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnumrActionPerformed
         // TODO add your handling code here:
@@ -208,7 +217,7 @@ public class principal extends javax.swing.JFrame {
     private void cmdcalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdcalcularActionPerformed
 
         try {
-        int opc, pr1, pr2, pi1, pi2, den;
+        int opc, pr1, pr2, pi1, pi2,den;
         Complejos c1, c2, c3;
         opc = cmbopc.getSelectedIndex();
         pr1 = Integer.parseInt(txtparteentera1.getText());
@@ -239,18 +248,18 @@ public class principal extends javax.swing.JFrame {
                 c3 = c1.Dividir(c2);
                 txtre.setText("");
                 txtri.setText("");
+                den =((c2.getPartereal() * c2.getPartereal()) + (c2.getParteI() * c2.getParteI()));
                 txtnumr.setText("" + c3.getPartereal());
                 txtnumi.setText("" + c3.getParteI());
-                den = (int) (c2.getPartereal() * c2.getPartereal() + c2.getParteI() * c2.getParteI());
-                txtdeni.setText(""+den);
-                txtdene.setText("" + den);
+                txtdeni.setText(""+ den);
+                txtdenr .setText("" + den);
                 break;
         }
         
         }catch(NumberFormatException e){
             JOptionPane.showMessageDialog(null, "Escriba bien los numeros", "Error", JOptionPane.ERROR_MESSAGE);
            txtparteentera1.requestFocusInWindow();
-            txtdene.setText("");
+            txtdenr.setText("");
             txtdeni.setText("");
             txtnumi.setText("");
             txtnumr.setText("");
@@ -267,7 +276,7 @@ public class principal extends javax.swing.JFrame {
 
     private void cmdlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdlimpiarActionPerformed
     txtparteentera1.requestFocusInWindow();
-            txtdene.setText("");
+            txtdenr.setText("");
             txtdeni.setText("");
             txtnumi.setText("");
             txtnumr.setText("");
@@ -334,8 +343,8 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JTextField txtdene;
     private javax.swing.JTextField txtdeni;
+    private javax.swing.JTextField txtdenr;
     private javax.swing.JTextField txtnumi;
     private javax.swing.JTextField txtnumr;
     private javax.swing.JTextField txtparteentera1;

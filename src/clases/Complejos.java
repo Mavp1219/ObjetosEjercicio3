@@ -28,11 +28,11 @@ public class Complejos {
         this.parteI = parteI;
     }
 
-    public double getPartereal() {
+    public int getPartereal() {
         return partereal;
     }
 
-    public double getParteI() {
+    public int getParteI() {
         return parteI;
     }
 
@@ -61,18 +61,19 @@ public class Complejos {
         int real, i;
 
         real = (this.partereal * c2.partereal) - (this.parteI * c2.parteI);
-        i = (this.partereal * c2.parteI) - (this.parteI * c2.parteI);
+        i = (this.partereal * c2.parteI) + (this.parteI * c2.partereal);
         c = new Complejos(real, i);
         return c;
     }
 
-    public Complejos Dividir(Complejos c2) {
+    
+    public Complejos Dividir(Complejos c2){
         Complejos c;
-        int real, i;
-        real = (this.partereal * c2.partereal) + (this.parteI * c2.parteI) / (c2.partereal * c2.partereal) + (c2.parteI * c2.parteI);
-        i = (c2.parteI * c2.partereal) - (this.partereal * c2.parteI) / (c2.partereal * c2.partereal) + (c2.parteI * c2.parteI);
-        c = new Complejos(real, i);
+        int rn, in;
+        rn = ((this.partereal * c2.parteI) + (this.parteI * c2.parteI));
+        in = ((this.parteI * c2.partereal) - (this.partereal * c2.parteI));
+        c= new Complejos(rn, in);
         return c;
     }
-
+    
 }

@@ -69,12 +69,11 @@
         <Component class="javax.swing.JComboBox" name="cmbopc">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="5">
+              <StringArray count="4">
                 <StringItem index="0" value="Sumado"/>
                 <StringItem index="1" value="Restado"/>
                 <StringItem index="2" value="Multiplicado"/>
                 <StringItem index="3" value="Dividido"/>
-                <StringItem index="4" value=" "/>
               </StringArray>
             </Property>
           </Properties>
@@ -183,19 +182,25 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txtre">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="90" y="210" width="70" height="20"/>
+              <AbsoluteConstraints x="80" y="200" width="80" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txtri">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtriActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="180" y="210" width="80" height="20"/>
+              <AbsoluteConstraints x="180" y="200" width="80" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -213,12 +218,15 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txtnumr">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtnumrActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="30" y="300" width="90" height="20"/>
+              <AbsoluteConstraints x="30" y="290" width="90" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -229,13 +237,16 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtdene">
+        <Component class="javax.swing.JTextField" name="txtdenr">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtdeneActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtdenrActionPerformed"/>
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="30" y="340" width="90" height="20"/>
+              <AbsoluteConstraints x="30" y="340" width="90" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -279,9 +290,12 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txtnumi">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="150" y="300" width="80" height="-1"/>
+              <AbsoluteConstraints x="150" y="290" width="80" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -293,9 +307,12 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JTextField" name="txtdeni">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="150" y="340" width="80" height="-1"/>
+              <AbsoluteConstraints x="150" y="340" width="80" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -347,7 +364,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="20" y="280" width="-1" height="-1"/>
+              <AbsoluteConstraints x="10" y="260" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
