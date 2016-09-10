@@ -11,19 +11,20 @@ package clases;
  */
 public class Complejos {
 
-    private double partereal;
-    private double parteI;
+    private int partereal;
+    private int parteI;
 
-    public Complejos(double partereal, double parteI) {
+    public Complejos(int partereal, int parteI) {
         this.partereal = partereal;
         this.parteI = parteI;
+
     }
 
-    public void setPartereal(double partereal) {
+    public void setPartereal(int partereal) {
         this.partereal = partereal;
     }
 
-    public void setParteI(double parteI) {
+    public void setParteI(int parteI) {
         this.parteI = parteI;
     }
 
@@ -37,7 +38,7 @@ public class Complejos {
 
     public Complejos sumar(Complejos c2) {
         Complejos c;
-        double real, i;
+        int real, i;
 
         real = this.partereal + c2.partereal;
         i = this.parteI + c2.parteI;
@@ -47,7 +48,7 @@ public class Complejos {
 
     public Complejos restar(Complejos c2) {
         Complejos c;
-        double real, i;
+        int real, i;
 
         real = this.partereal - c2.partereal;
         i = this.parteI - c2.parteI;
@@ -57,10 +58,19 @@ public class Complejos {
 
     public Complejos Multiplicar(Complejos c2) {
         Complejos c;
-        double real, i;
+        int real, i;
 
         real = (this.partereal * c2.partereal) - (this.parteI * c2.parteI);
         i = (this.partereal * c2.parteI) - (this.parteI * c2.parteI);
+        c = new Complejos(real, i);
+        return c;
+    }
+
+    public Complejos Dividir(Complejos c2) {
+        Complejos c;
+        int real, i;
+        real = (this.partereal * c2.partereal) + (this.parteI * c2.parteI) / (c2.partereal * c2.partereal) + (c2.parteI * c2.parteI);
+        i = (c2.parteI * c2.partereal) - (this.partereal * c2.parteI) / (c2.partereal * c2.partereal) + (c2.parteI * c2.parteI);
         c = new Complejos(real, i);
         return c;
     }
